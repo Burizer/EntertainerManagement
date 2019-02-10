@@ -38,8 +38,8 @@ USING (VALUES
 AS SOURCE (FK_AgentID,ContactInfo_phoneNo,ContactInfo_phoneNoExt,ContactInfo_email,ContactInfo_type)
 ON Target.FK_AgentID = Source.FK_AgentID
 WHEN NOT MATCHED BY TARGET THEN
-INSERT (ContactInfo_phoneNo,ContactInfo_phoneNoExt,ContactInfo_email,ContactInfo_type)
-VALUES (ContactInfo_phoneNo,ContactInfo_phoneNoExt,ContactInfo_email,ContactInfo_type);
+INSERT (FK_AgentID,ContactInfo_phoneNo,ContactInfo_phoneNoExt,ContactInfo_email,ContactInfo_type)
+VALUES (FK_AgentID,ContactInfo_phoneNo,ContactInfo_phoneNoExt,ContactInfo_email,ContactInfo_type);
 
 MERGE INTO Agent AS TARGET
 USING (VALUES

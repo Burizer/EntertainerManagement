@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Agent]
 (
-	[Agent_ID] INT NOT NULL, 
+	[Agent_ID] INT IDENTITY(1,1) NOT NULL, 
     [Agent_fName] NVARCHAR(50) NOT NULL, 
     [Agent_lName] NVARCHAR(50) NOT NULL,
 	[Agent_salary] money not null,
